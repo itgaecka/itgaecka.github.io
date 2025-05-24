@@ -8,14 +8,14 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "⚙️ IT-Гаечка",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
+    locale: "ru-RU",
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
@@ -29,26 +29,29 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#f0f4f8",         // Очень светлый голубовато-кремовый
+          lightgray: "#d9e2ec",     // Светлый голубовато-серый
+          gray: "#9fb3c8",          // Средний серо-голубой
+          darkgray: "#486581",      // Темный сине-серый
+          dark: "#102a43",          // Глубокий синий (почти черный)
+          secondary: "#1976d2",     // Чистый синий (акцент)
+          tertiary: "#b22222",      // Темно-красный (контрастный акцент)
+          highlight: "rgba(255, 215, 0, 0.12)", // Легкое золотое свечение
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#0f172a",         // Более светлый фон (было #0a192f)
+          lightgray: "#1e293b",     // Улучшенная видимость разделителей
+          gray: "#334155",          // Четкие границы (было #2a4a6f)
+          darkgray: "#e2e8f0",      // Основной текст - мягкий белый
+          dark: "#f8fafc",          // Яркие заголовки (было #e6f1ff)
+          secondary: "#38bdf8",     // Мягкий голубой вместо неонового
+          tertiary: "#b22222",      // Теплый янтарный вместо лососевого
+          highlight: "rgba(56, 189, 248, 0.12)", // Субтильная подсветка
+          
+          // Дополнительные улучшения:
+          codeBackground: "#1e293b", // Отдельный фон для блоков кода
+          codeText: "#bae6fd",       // Голубоватый текст кода
+          linkHover: "#7dd3fc",      // Подсветка ссылок
         },
       },
     },

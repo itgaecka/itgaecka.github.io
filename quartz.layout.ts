@@ -38,7 +38,19 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+    	title: "Заметки",
+    	folderClickBehavior: "link", // what happens when you click a folder ("link" to navigate to folder page on click or "collapse" to collapse folder on click)
+  	folderDefaultState: "open", // default state of folders ("collapsed" or "open")
+    	mapFn: (node) => {
+	    if (node.isFolder) {
+	      node.displayName = "📘 " + node.displayName
+	    } else {
+	      node.displayName = "📃 " + node.displayName
+	    }
+    	
+  	},
+    }),
   ],
   right: [
     Component.Graph(),
